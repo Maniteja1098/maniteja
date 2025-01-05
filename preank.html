@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hacked</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 50px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        #joke {
+            display: none;
+            margin-top: 50px;
+            color: lime;
+            font-size: 25px;
+        }
+    </style>
+    <script>
+        function revealJoke() {
+            setTimeout(() => {
+                document.getElementById('warning').style.display = 'none';
+                document.getElementById('joke').style.display = 'block';
+            }, 5000); // Reveals the joke after 5 seconds
+        }
+    </script>
+</head>
+<body onload="revealJoke()">
+    <h1 id="warning">⚠️ Warning! Your Phone Has Been Hacked! ⚠️</h1>
+    <div id="joke">
+        😂 Just Kidding! Your phone is safe! This is a prank! 😂
+    </div>
+</body>
+</html>
